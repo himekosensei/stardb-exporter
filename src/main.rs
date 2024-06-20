@@ -143,7 +143,7 @@ fn export() -> Result<()> {
 
 fn load_online_keys() -> Result<HashMap<u32, Vec<u8>>> {
     let keys: HashMap<u32, String> = ureq::get(
-        "https://raw.githubusercontent.com/juliuskreutz/stardb-exporter/master/keys.json",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/juliuskreutz/stardb-exporter/master/keys.json",
     )
     .call()?
     .into_json()?;
